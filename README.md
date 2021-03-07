@@ -23,7 +23,7 @@ download or take a git clone of the code from GitHub.
   * Demo and walkthrough of [examples](#examples)
   * General outline: what they are, how they work
 
-    * REST (`Representational State Transfer`) — textual representation of
+    * [REST (`Representational State Transfer`)](https://en.m.wikipedia.org/wiki/Representational_state_transfer) — textual representation of
       _resources_ that allow reading/modification using a defined set of
       operations. In short, it's about using HTTP methods (GET/POST/DELETE
       etc) to access/change data on a remote server.
