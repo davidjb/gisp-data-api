@@ -32,12 +32,15 @@
 
     <!-- Map configuration -->
     <script>
+      // Create the map
       const map = L.map('mapid').setView([-21, 145], 6);
 
+      // Add the base tile layer from OpenStreetMap
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
+      // Set up the callback function to populate the map with data
       function populateMap(data) {
         data.result.records.forEach(record => {
           L.marker([record.Latitude, record.Longitude])

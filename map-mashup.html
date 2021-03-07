@@ -32,12 +32,15 @@
 
     <!-- Map configuration -->
     <script>
+      // Create the map
       const map = L.map('mapid').setView([-21, 145], 6);
 
+      // Add the base tile layer from OpenStreetMap
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
+      // Set up the callback function to populate the map with data
       function populateMap(data) {
         const markers = []
         data.result.records.forEach(record => {
@@ -50,8 +53,9 @@
                 <strong>Organisation:</strong> ${record.OrganisationName}
               `)
               .on('popupopen', (event) => {
-                // Wikipedia pages API - look up a species name
-                // This loads at the time of opening a popup window, for efficiency, since there are 1000s of records
+                // Wikipedia pages API - look up a species name and display its
+                // photo and description. This loads at the time of opening a
+                // popup window, for efficiency, since there can be 1000s of records
                 fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=info%7Cdescription%7Cpageimages&titles=${encodeURIComponent(record.ScientificName)}&redirects=1&formatversion=2&piprop=original&inprop=url%7Cdisplaytitle`)
                   .then(response => response.json())
                   .then(data => {
@@ -70,6 +74,8 @@
               })
           )
         })
+
+        // Add a layer group to the map to display legally-required attribution
         L.layerGroup(markers, {
           attribution: 'Data from <a href="https://www.data.qld.gov.au/dataset/wildnet-koala-locations/resource/8dbceb06-aa8f-411a-baae-13d66475fdd7">WildNet Koala Locations</a> (<a href="https://www.data.qld.gov.au/api/3/action/datastore_search?resource_id=8dbceb06-aa8f-411a-baae-13d66475fdd7&limit=5">JSON</a>) and Wikipedia (<a href="https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=pageimages%7Cinfo&titles=Phascolarctos%20cinereus&redirects=1&formatversion=2&inprop=url%7Cdisplaytitle">JSON</a>)'
         })
