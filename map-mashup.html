@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Koala Mapping Example</title>
+    <base target="_blank">
+
+    <!-- Leaflet mapping library CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="" />
+
+    <!-- Page CSS - map needs dimensions to work -->
+    <style>
+      body { margin: 0; }
+      .map { width: 100vw; height: 100vh; }
+    </style>
+  </head>
+  <body>
+
+    <!-- Leaflet map -->
+    <div class="map" id="mapid"></div>
+
+    <!-- Leaflet map JavaScript -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+
+    <!-- Map configuration -->
+    <script>
+      const map = L.map('mapid').setView([-21, 145], 6);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      function populateMap(data) {
+        const markers = []
+        data.result.records.forEach(record => {
+          markers.push(
+            L.marker([record.Latitude, record.Longitude])
+              .bindPopup(`
+                <strong>Scientific name:</strong> <a href="https://en.wikipedia.org/wiki/${record.ScientificName}" target="_blank">${record.ScientificName}</a><br>
+                <strong>Locality:</strong> ${record.LocalityDetails}<br>
+                <strong>Project:</strong> ${record.ProjectName}<br>
+                <strong>Organisation:</strong> ${record.OrganisationName}
+              `)
+              .on('popupopen', (event) => {
+                // Wikipedia pages API - look up a species name
+                fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=info%7Cdescription%7Cpageimages&titles=${encodeURIComponent(record.ScientificName)}&redirects=1&formatversion=2&piprop=original&inprop=url%7Cdisplaytitle`)
+                  .then(response => response.json())
+                  .then(data => {
+                    const wikiPage = data.query.pages[0]
+                    event.popup._contentNode.appendChild(document.createRange().createContextualFragment(`
+                      <div style="margin-top: 10px;">
+                        <h3>From Wikipedia</h3>
+                        <img src="${wikiPage.original.source}" alt="${wikiPage.displaytitle}" style="max-width: 50%;">
+                        <p style="margin: 0;">${wikiPage.description}</p>
+                        <a href="${wikiPage.fullurl}">Learn more about ${wikiPage.displaytitle}&hellip;</a>
+                      </div>
+                    `))
+                  })
+              })
+          )
+        })
+        L.layerGroup(markers, {
+                attribution: 'Data from <a href="https://www.data.qld.gov.au/dataset/wildnet-koala-locations/resource/8dbceb06-aa8f-411a-baae-13d66475fdd7">WildNet Koala Locations</a> (<a href="https://www.data.qld.gov.au/api/3/action/datastore_search?resource_id=8dbceb06-aa8f-411a-baae-13d66475fdd7&limit=5">JSON</a>) and Wikipedia (<a href="https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=pageimages%7Cinfo&titles=Phascolarctos%20cinereus&redirects=1&formatversion=2&inprop=url%7Cdisplaytitle">JSON</a>)'
+        })
+          .addTo(map)
+      }
+    </script>
+
+    <!-- Koala data API: this calls back the `populateMap` function above via JSONP -->
+    <!-- API at https://www.data.qld.gov.au/dataset/wildnet-koala-locations/resource/8dbceb06-aa8f-411a-baae-13d66475fdd7 -->
+    <!-- Note that this is a static dataset so could be cached locally for efficiency -->
+    <script src="https://www.data.qld.gov.au/api/3/action/datastore_search?resource_id=8dbceb06-aa8f-411a-baae-13d66475fdd7&limit=1000&callback=populateMap"></script>
+  </body>
+</html>
