@@ -62,7 +62,7 @@
                     const wikiPage = data.query.pages[0]
                     event.popup._contentNode.appendChild(document.createRange().createContextualFragment(`
                       <div style="margin-top: 10px;">
-                        <h3>From Wikipedia</h3>
+                        <h3>From Wikipedia: ${wikiPage.displaytitle}</h3>
                         <a href="${wikiPage.original.source}">
                           <img src="${wikiPage.original.source}" alt="${wikiPage.displaytitle}" style="max-width: 50%;">
                         </a>
