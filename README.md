@@ -11,16 +11,37 @@ session with [David Beitey](https://git.io/davidjb).
 
 ## Outline
 
-* Intro - outline, ask questions, introduce yourself
+* Intro - outline, ask questions, introduction
 * Background - who I am, my experience
-* 
-REST
-API Demo - JSON dataset --> Python --> web
+* APIs:
 
-    ipython (just like python, but tab completion + help etc)
-    jupyter notebook
+  * Demo and walk through of worked examples
+  * General outline: what they are, how they work
 
-Python + Web design and databases: JCU.me, Research Data JCU
-*IoT -  Home Automation, Classroom on the Reef (cameras + sensors)
-* Shameless plugs: DevNQ + JCU Work Experience
-* What is Markdown
+    * REST (`Representational State Transfer`) — textual representation of
+      _resources_ that allow reading/modification using a defined set of
+      operations. In short, it's about using HTTP methods (GET/POST/DELETE
+      etc) to access/change data on a remote server.
+
+  * Data formats + view examples:
+
+    * `JSON` (most common/universal): [example](https://www.data.qld.gov.au/api/3/action/datastore_search?resource_id=8dbceb06-aa8f-411a-baae-13d66475fdd7&limit=5)
+    * `XML`:
+      [example](https://qldspatial.information.qld.gov.au/catalogueadmin/rest/document?id={40D75ED6-3959-41EB-A5C8-E563FA5B66CA})
+
+  * Tools & documentation vary wildly between APIs
+
+    * [Wikipedia API sandbox](https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&format=json&origin=*&prop=pageimages%7Cinfo%7Cdescription%7Cpageprops%7Cpageterms%7Cmapdata&titles=Phascolarctos%20cinereus&redirects=1&formatversion=2&piprop=original&inprop=url%7Cdisplaytitle)
+    * [Koala WildNet data](https://www.data.qld.gov.au/dataset/wildnet-koala-locations/resource/8dbceb06-aa8f-411a-baae-13d66475fdd7)
+    * ...or little/no documentation at all
+
+* Work Experience:
+
+  * [JCU Research Portfolio](https://jcu.me) — [redesigned UI](https://research.jcu.io) [Python, web design, SQL, databases]
+  * IoT — [Classroom on the Reef](https://www.jcu.edu.au/classroom-on-the-reef/livecams) and [live sensor data](https://cotr-data.jcu.edu.au)
+  * Home Assistant for automation
+  * Security: software analysis, vulnerability reporting to companies, reviewing their APIs
+
+* Q&A Session: ask me anything; around the syllabus or anything else
+
+* Shameless plug: [DevNQ](https://devnq.org)
