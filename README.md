@@ -3,6 +3,11 @@
 Coding demo about data APIs, Python, web servers and an ask-me-anything
 session with [David Beitey](https://git.io/davidjb).
 
+## Get a copy
+
+Visit <https://github.com/davidjb/gisp-data-api-examples> to either view,
+download or take a git clone of the code from GitHub.
+
 ## Examples
 
 * [HTML + JavaScript Koala Locations](map.html)
