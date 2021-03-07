@@ -11,11 +11,11 @@ session with [David Beitey](https://git.io/davidjb).
 
 ## Outline
 
-* Intro - outline, ask questions, introduction
-* Background - who I am, my experience
+* Intro — outline, ask questions, introduction
+* Background — who I am, my experience
 * APIs:
 
-  * Demo and walk through of worked examples
+  * Demo and walkthrough of [examples](#examples)
   * General outline: what they are, how they work
 
     * REST (`Representational State Transfer`) — textual representation of
