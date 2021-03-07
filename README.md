@@ -12,7 +12,7 @@ download or take a git clone of the code from GitHub.
 
 * [HTML + JavaScript Koala Locations](map.html)
 * [HTML + JavaScript Koala Locations Mashup with Wikipedia](map-mashup.html)
-* [Python Web Server](raw.py)
+* [Python + HTML + JavaScript Koala Locations Web Server](map.py)
 
 ## Outline
 
