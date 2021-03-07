@@ -1,7 +1,7 @@
 # Data API Example
 
-Coding demo about data APIs, Python, web servers and an ask-me-anything
-session with [David Beitey](https://git.io/davidjb).
+Coding demo about data APIs, JavaScript, Python, web servers, web techonologies and an
+ask-me-anything session with [David Beitey (@davidjb)](https://git.io/davidjb).
 
 ## Get a copy
 
