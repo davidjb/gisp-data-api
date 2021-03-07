@@ -39,7 +39,6 @@
       }).addTo(map);
 
       function populateMap(data) {
-        const markers = []
         data.result.records.forEach(record => {
           L.marker([record.Latitude, record.Longitude])
            .bindPopup(`
