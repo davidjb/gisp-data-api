@@ -3,6 +3,12 @@
 Coding demo about data APIs, Python, web servers and an ask-me-anything
 session with [David Beitey](https://git.io/davidjb).
 
+## Examples
+
+* [HTML + JavaScript Koala Locations](map.html)
+* [HTML + JavaScript Koala Locations Mashup with Wikipedia](map-mashup.html)
+* [Python Web Server](raw.py)
+
 ## Outline
 
 * Intro - outline, ask questions, introduce yourself
