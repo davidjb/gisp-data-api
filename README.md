@@ -49,4 +49,4 @@ download or take a git clone of the code from GitHub.
 
 * Q&A Session: ask me anything; around the syllabus or anything else
 
-* Shameless plug: [DevNQ](https://devnq.org) - community run, all-invlusive group for IT developers (events, hackathons, socials)
+* Shameless plug: [DevNQ](https://devnq.org) - community run, all-invlusive group for IT developers (events, hackathon on Townsville Show weekend in July, socials)
