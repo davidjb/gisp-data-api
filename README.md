@@ -23,7 +23,7 @@ download or take a git clone of the code from GitHub or scan the above QR code.
 
 * Intro — outline, ask questions, introduction
 * Background — who I am, my experience
-* APIs (Application Programming Interfaces):
+* [APIs (Application Programming Interfaces)](https://en.wikipedia.org/wiki/API):
 
   * Demo and walkthrough of [examples](#examples)
   * General outline: what they are and aren't, how they work
@@ -31,7 +31,7 @@ download or take a git clone of the code from GitHub or scan the above QR code.
     * [REST (`Representational State Transfer`)](https://en.m.wikipedia.org/wiki/Representational_state_transfer) — software _style_ involving textual representation of
       _resources_ that allow reading/modification using a defined set of
       operations. In short, it's about using HTTP methods (GET/POST/PUT/DELETE
-      etc) to access/change data on a remote server in a set way.
+      etc) to access/change data on a remote server in a defined way.
 
   * Data formats + view examples:
 
@@ -45,6 +45,17 @@ download or take a git clone of the code from GitHub or scan the above QR code.
     * [Koala WildNet data](https://www.data.qld.gov.au/dataset/wildnet-koala-locations/resource/8dbceb06-aa8f-411a-baae-13d66475fdd7)
     * ...or little/no documentation at all
     * ...or not an API at all ([BOM Cyclone Forecast example](http://www.bom.gov.au/qld/forecasts/cyclone.shtml))
+
+  * Considerations
+
+    * **All APIs are different**
+    * Programming language / environment being using (Python, JavaScript, PHP, etc)
+    * Versoning: APIs will often have v1, v2, etc in their URLs indicating structure
+    * [CORS: Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) - ability to load data across domains in browser
+    * [Rate Limiting](https://en.wikipedia.org/wiki/Rate_limiting): limits on allowed requests, by user/computer/network
+    * Access Control: some APIs require keys or paid access (e.g. Google Maps API)
+    * Error Handling: code should expect & handle errors (network failure, API offline, invalid data, etc)
+    * Caching: hitting same API repeatedly is wasteful, leverage browser or other cache
 
 * Work Experience:
 
