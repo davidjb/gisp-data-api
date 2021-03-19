@@ -25,16 +25,24 @@ download or take a git clone of the code from GitHub or scan the above QR code.
 * Background — who I am, my experience
 * [APIs (Application Programming Interfaces)](https://en.wikipedia.org/wiki/API):
 
-  * Roads analogy: except all rules are "should"/"might", signs may be wrong/missing,
-    traffic lights (may be wrong!), congestion, potholes, toll bridges,
-    gated communities, roads may just _end_
   * Demo and walkthrough of [examples](#examples)
+  * API = Bistro: walk in, line up, there is a defined menu of offerings
+
+      * You ask for what you want, they make it and deliver it.
+      * You don't mind/can't see or control how they make your spaghetti, just that you get it
+      * Some places may offer flexibility (V, GF, etc) but you have to ask for it
+      * Not every restaurant is the same
+
   * General outline: what they are and aren't, how they work
 
     * [REST (`Representational State Transfer`)](https://en.m.wikipedia.org/wiki/Representational_state_transfer) — software _style_ involving textual representation of
       _resources_ that allow reading/modification using a defined set of
       operations. In short, it's about using HTTP methods (GET/POST/PUT/DELETE
       etc) to access/change data on a remote server in a defined way.
+      
+      * REST ⋍ Roads: except all rules are "should"/"might", signs may be wrong/missing,
+        traffic lights (may be wrong!), congestion, potholes, toll bridges,
+        gated communities, roads may just _end_
 
   * Data formats + view examples:
 
