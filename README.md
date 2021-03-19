@@ -1,4 +1,4 @@
-# Data API Example
+# Data API Examples
 
 Coding demo about data APIs, JavaScript, Python, web servers, web techonologies and an
 ask-me-anything session with [David Beitey (@davidjb)](https://git.io/davidjb).
@@ -23,10 +23,10 @@ download or take a git clone of the code from GitHub or scan the above QR code.
 
 * Intro — outline, ask questions, introduction
 * Background — who I am, my experience
-* APIs:
+* APIs (Application Programming Interfaces):
 
   * Demo and walkthrough of [examples](#examples)
-  * General outline: what they are, how they work
+  * General outline: what they are and aren't, how they work
 
     * [REST (`Representational State Transfer`)](https://en.m.wikipedia.org/wiki/Representational_state_transfer) — software _style_ involving textual representation of
       _resources_ that allow reading/modification using a defined set of
@@ -44,13 +44,14 @@ download or take a git clone of the code from GitHub or scan the above QR code.
     * [Wikipedia API sandbox](https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&format=json&origin=*&prop=pageimages%7Cinfo%7Cdescription%7Cpageprops%7Cpageterms%7Cmapdata&titles=Phascolarctos%20cinereus&redirects=1&formatversion=2&piprop=original&inprop=url%7Cdisplaytitle)
     * [Koala WildNet data](https://www.data.qld.gov.au/dataset/wildnet-koala-locations/resource/8dbceb06-aa8f-411a-baae-13d66475fdd7)
     * ...or little/no documentation at all
+    * ...or not an API at all ([BOM Cyclone Forecast example](http://www.bom.gov.au/qld/forecasts/cyclone.shtml))
 
 * Work Experience:
 
   * [JCU Research Portfolio](https://jcu.me) — [redesigned UI](https://research.jcu.io) [Python, web design, SQL, databases]
   * IoT — [Classroom on the Reef](https://www.jcu.edu.au/classroom-on-the-reef/livecams) and [live sensor data](https://cotr-data.jcu.edu.au)
   * Home Assistant for automation
-  * Security: software analysis, vulnerability reporting to companies, reviewing their APIs
+  * Security & consulting: software analysis, vulnerability reporting to companies, reviewing their APIs
 
 * Q&A Session: ask me anything; around the syllabus or anything else
 
