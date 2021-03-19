@@ -49,4 +49,8 @@ download or take a git clone of the code from GitHub.
 
 * Q&A Session: ask me anything; around the syllabus or anything else
 
-* Shameless plug: [DevNQ](https://devnq.org) - community run, all-invlusive group for IT developers (events, hackathon on Townsville Show weekend in July, socials)
+* Shameless plugs:
+
+  * [DevNQ](https://devnq.org) - community run, all-invlusive group for IT developers (events, hackathon on Townsville Show weekend in July, socials)
+  * [Young ICT Explorers](https://www.youngictexplorers.net.au/) - yearly competition that students/schools can enter and win prizes
+  * [TCC Big Ideas Youth Challenge](https://www.eventbrite.com.au/e/townsville-city-council-big-ideas-youth-challenge-tickets-142196669065) - 22 April 2021, one day event around innovation, entrepreneurship and change. Also a PD session held on the day prior for teachers.
