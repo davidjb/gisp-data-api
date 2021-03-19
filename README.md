@@ -8,9 +8,9 @@ Delivered as part of an industry/educator partnership formed in the
 
 ## Get a copy
 
-[![Scan me](url.svg)](https://github.com/davidjb/gisp-data-api-examples)
+[![Scan me](url.svg)](https://github.com/davidjb/gisp-data-api)
 
-Visit <https://github.com/davidjb/gisp-data-api-examples> to either view,
+Visit <https://github.com/davidjb/gisp-data-api> to either view,
 download or take a git clone of the code from GitHub or scan the above QR code.
 
 ## Examples
