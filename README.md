@@ -26,7 +26,8 @@ download or take a git clone of the code from GitHub or scan the above QR code.
 * [APIs (Application Programming Interfaces)](https://en.wikipedia.org/wiki/API):
 
   * Roads analogy: except all rules are "should"/"might", signs may be wrong/missing,
-    congestion, potholes, toll bridges, gated communities, roads may just _end_
+    traffic lights (may be wrong!), congestion, potholes, toll bridges,
+    gated communities, roads may just _end_
   * Demo and walkthrough of [examples](#examples)
   * General outline: what they are and aren't, how they work
 
