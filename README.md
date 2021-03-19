@@ -3,10 +3,15 @@
 Coding demo about data APIs, JavaScript, Python, web servers, web techonologies and an
 ask-me-anything session with [David Beitey (@davidjb)](https://git.io/davidjb).
 
+Delivered as part of an industry/educator partnership formed in the
+[ICT Gateway to Industry Schools Program (GISP) initiative](https://qldictgisp.acs.org.au/).
+
 ## Get a copy
 
+[![Scan me](url.svg)](https://github.com/davidjb/gisp-data-api-examples)
+
 Visit <https://github.com/davidjb/gisp-data-api-examples> to either view,
-download or take a git clone of the code from GitHub.
+download or take a git clone of the code from GitHub or scan the above QR code.
 
 ## Examples
 
