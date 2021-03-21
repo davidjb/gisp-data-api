@@ -51,7 +51,7 @@ COMMON_NAMES = {
 # Python "web framework" libraries offer a simpler way of doing this
 class MyHTTPServer(BaseHTTPRequestHandler):
     def do_GET(self):
-        # Pass through ?records=1234 to adjust the records shown
+        # Pass through ?records=1234 to adjust the number of records shown
         records_option = self.path.split('records=')
         records = int(records_option[1]) if len(records_option) == 2 else 1000
 
@@ -65,9 +65,9 @@ class MyHTTPServer(BaseHTTPRequestHandler):
             records = [{
                 "lat": record["Latitude"],
                 "lng": record["Longitude"],
-                "name": COMMON_NAMES[record["ScientificName"]],
+                "name": COMMON_NAMES[record["ScientificName"]],  # Reformat scientific name
                 "species": record["ScientificName"],
-                "locality": record["LocalityDetails"].title().rstrip(','),
+                "locality": record["LocalityDetails"].title().rstrip(','),  # Clean up locaility names and formatting
                 "project": record["ProjectName"],
                 "organisation": record["OrganisationName"]
             } for record in all_records]
